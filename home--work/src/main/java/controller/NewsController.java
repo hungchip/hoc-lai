@@ -1,6 +1,5 @@
 package controller;
 
-import model.Manage;
 import model.News;
 
 import javax.servlet.RequestDispatcher;
@@ -21,9 +20,11 @@ public class NewsController extends HttpServlet {
         News news1 = new News();
         news1.setTitle(" day la tieu de");
         news1.setContent("noi dung 1");
+
         News news2 = new News();
         news2.setTitle(" day la tieu de 2");
         news2.setContent("noi dung 2");
+
         News news3 = new News();
         news3.setTitle(" tieu de 3");
         news3.setContent("noi dung 3");
@@ -33,10 +34,7 @@ public class NewsController extends HttpServlet {
         newsList.add(news2);
         newsList.add(news3);
 
-        Manage manage = new Manage();
-        manage.setNews(newsList);
-
-        req.setAttribute("tintuc",manage);
+        req.setAttribute("models",newsList );
         RequestDispatcher rd = req.getRequestDispatcher("/views/news.jsp");
         rd.forward(req,resp);
     }

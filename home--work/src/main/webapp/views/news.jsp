@@ -6,12 +6,25 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="ki_tu_bat_ki" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
     <h1>Danh sach</h1>
-    xuat danh sach: ${tintuc.news};
+    <ki_tu_bat_ki:forEach var="bien" items="${models}">
+
+        ${bien.title}
+        ${bien.content}<br>
+    </ki_tu_bat_ki:forEach>
+    <style>
+        h1{
+            font-weight: lighter;
+            font-size: 28px;
+            color: goldenrod;
+            position: center;
+        }
+    </style>
 </body>
 </html>

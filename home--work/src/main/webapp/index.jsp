@@ -13,6 +13,20 @@
 <body>
     <h1> đây là trang chủ</h1>
     <h2>afjhjdsk</h2>
+    <style>
+        h2{
+            font-size: 50px;
+            font-weight: bold;
+            color: #1ffffd;
+        }
+        h1{
+            font-size: 192px;
+            font-weight: bolder;
+            position: static;
+            text-align: justify-all;
+            color: red;
+        }
+    </style>
 
 </body>
 </html>
